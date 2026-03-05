@@ -149,9 +149,9 @@ function TeamCard({
 }) {
   return (
     <AnimatedSection delay={delay}>
-      <div className="h-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
+      <div className="h-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-colors">
         {/* Avatar */}
-        <div className="relative w-24 h-24 rounded-full overflow-hidden mb-5 ring-2 ring-white/10 group-hover:ring-green/30 transition-all mx-auto sm:mx-0">
+        <div className="relative w-24 h-24 rounded-full overflow-hidden mb-5 ring-2 ring-white/10 mx-auto sm:mx-0">
           <Image
             src={member.photo}
             alt={member.name}
@@ -233,7 +233,7 @@ export default function AboutPage() {
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {missionPoints.map((point, i) => (
               <AnimatedSection key={point.title} delay={i * 0.1}>
-                <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
+                <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-colors group">
                   <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 group-hover:bg-green/20 transition-colors">
                     <point.icon size={28} className="text-green" />
                   </div>
