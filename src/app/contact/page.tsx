@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Mail, Send, CheckCircle2, ArrowUpRight } from "lucide-react";
+import { Mail, Send, CheckCircle2, ArrowUpRight, AlertCircle } from "lucide-react";
 
 const inquiryTypes = [
   "Charge Point Operator (CPO)",
@@ -17,11 +17,40 @@ const inquiryTypes = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [sending, setSending] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // In production, this would connect to a form handler
-    setSubmitted(true);
+    setError("");
+    setSending(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const body = {
+      firstName: formData.get("firstName") as string,
+      lastName: formData.get("lastName") as string,
+      email: formData.get("email") as string,
+      organization: formData.get("organization") as string,
+      inquiryType: formData.get("inquiryType") as string,
+      message: formData.get("message") as string,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -82,6 +111,7 @@ export default function ContactPage() {
                         </label>
                         <input
                           type="text"
+                          name="firstName"
                           required
                           className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-dark focus:outline-none focus:border-green/50 focus:ring-1 focus:ring-green/50 transition-colors"
                           placeholder="John"
@@ -93,6 +123,7 @@ export default function ContactPage() {
                         </label>
                         <input
                           type="text"
+                          name="lastName"
                           required
                           className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-dark focus:outline-none focus:border-green/50 focus:ring-1 focus:ring-green/50 transition-colors"
                           placeholder="Doe"
@@ -106,6 +137,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         required
                         className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-dark focus:outline-none focus:border-green/50 focus:ring-1 focus:ring-green/50 transition-colors"
                         placeholder="john@company.com"
@@ -118,6 +150,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
+                        name="organization"
                         className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-dark focus:outline-none focus:border-green/50 focus:ring-1 focus:ring-green/50 transition-colors"
                         placeholder="Company name"
                       />
@@ -127,7 +160,10 @@ export default function ContactPage() {
                       <label className="block text-sm font-medium text-slate mb-1.5">
                         Inquiry Type
                       </label>
-                      <select className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-green/50 focus:ring-1 focus:ring-green/50 transition-colors appearance-none">
+                      <select
+                        name="inquiryType"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-green/50 focus:ring-1 focus:ring-green/50 transition-colors appearance-none"
+                      >
                         <option value="" className="bg-charcoal">
                           Select an option
                         </option>
@@ -144,6 +180,7 @@ export default function ContactPage() {
                         Message *
                       </label>
                       <textarea
+                        name="message"
                         required
                         rows={5}
                         className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-dark focus:outline-none focus:border-green/50 focus:ring-1 focus:ring-green/50 transition-colors resize-none"
@@ -151,12 +188,20 @@ export default function ContactPage() {
                       />
                     </div>
 
+                    {error && (
+                      <div className="mt-4 flex items-center gap-2 text-red-400 text-sm">
+                        <AlertCircle size={16} />
+                        {error}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="mt-8 group inline-flex items-center gap-2 px-8 py-4 bg-green text-navy-dark font-bold rounded-lg hover:bg-green-light transition-colors text-sm w-full sm:w-auto justify-center"
+                      disabled={sending}
+                      className="mt-8 group inline-flex items-center gap-2 px-8 py-4 bg-green text-navy-dark font-bold rounded-lg hover:bg-green-light transition-colors text-sm w-full sm:w-auto justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <Send size={16} />
-                      Send Message
+                      {sending ? "Sending..." : "Send Message"}
                       <ArrowUpRight
                         size={16}
                         className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
