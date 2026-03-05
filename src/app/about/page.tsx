@@ -304,15 +304,15 @@ export default function AboutPage() {
               Ready to Build the Future of EV Charging?
             </h2>
             <p className="mt-4 text-lg text-slate max-w-2xl mx-auto">
-              Whether you are a site owner, fleet operator, or investor — we
-              would love to hear from you.
+              Whether you&apos;re a charge point operator, site owner, fleet
+              manager, or investor — our team is ready to talk.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/contact"
+                href="/contact?type=cpo"
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-green text-navy-dark font-bold rounded-lg hover:bg-green-light transition-colors text-sm"
               >
-                Get in Touch
+                Partner With Us as a CPO
                 <ArrowUpRight
                   size={16}
                   className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"

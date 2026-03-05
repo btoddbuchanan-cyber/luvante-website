@@ -5,6 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Mail, Send, CheckCircle2, ArrowUpRight } from "lucide-react";
 
 const inquiryTypes = [
+  "Charge Point Operator (CPO)",
   "General Inquiry",
   "Fleet Charging",
   "Commercial / Retail",
@@ -40,8 +41,8 @@ export default function ContactPage() {
               <span className="text-green">EV Charging</span>
             </h1>
             <p className="mt-6 text-lg text-slate max-w-xl mx-auto">
-              Whether you&apos;re a site owner, fleet operator, investor, or
-              partner — we&apos;d love to hear from you.
+              Whether you&apos;re a charge point operator, site owner, fleet
+              manager, investor, or partner — we&apos;d love to hear from you.
             </p>
           </AnimatedSection>
         </div>
@@ -204,6 +205,20 @@ export default function ContactPage() {
 
               <AnimatedSection delay={0.3}>
                 <div className="p-8 rounded-2xl bg-green/10 border border-green/20">
+                  <h3 className="font-heading text-lg font-semibold text-white mb-3">
+                    Charge Point Operators
+                  </h3>
+                  <p className="text-sm text-slate leading-relaxed">
+                    Looking to deploy faster and reduce your CapEx per port?
+                    Select &ldquo;Charge Point Operator&rdquo; from the inquiry
+                    type and our CPO partnerships team will reach out within 24
+                    hours.
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.4}>
+                <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
                   <h3 className="font-heading text-lg font-semibold text-white mb-3">
                     Quick Response
                   </h3>

@@ -15,6 +15,10 @@ import {
   Briefcase,
   Trees,
   CheckCircle2,
+  Handshake,
+  Rocket,
+  MapPin,
+  Wrench,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -280,23 +284,114 @@ export default function PlatformPage() {
         </div>
       </section>
 
+      {/* CPO Advantage Section */}
+      <section className="py-24 bg-gradient-to-b from-navy-dark to-navy">
+        <div className="mx-auto max-w-7xl px-6">
+          <AnimatedSection>
+            <SectionHeading
+              tag="CPO Advantage"
+              title="Purpose-Built for Charge Point Operators"
+              description="Luvante's platform is designed to help CPOs deploy more sites, faster — with lower capital requirements and higher return on every port."
+            />
+          </AnimatedSection>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <AnimatedSection delay={0.1}>
+              <div className="h-full flex flex-col md:flex-row gap-6 p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/20 transition-colors">
+                <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center shrink-0">
+                  <Rocket size={28} className="text-green" />
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-white mb-2">
+                    Rapid Site Activation
+                  </h3>
+                  <p className="text-slate text-sm leading-relaxed">
+                    Deploy a full charging site in days instead of months. No
+                    trenching permits, no excavation crews, no weeks of
+                    construction downtime. Your chargers go live while
+                    competitors are still waiting on permits.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <div className="h-full flex flex-col md:flex-row gap-6 p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/20 transition-colors">
+                <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center shrink-0">
+                  <MapPin size={28} className="text-green" />
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-white mb-2">
+                    Relocatable Assets
+                  </h3>
+                  <p className="text-slate text-sm leading-relaxed">
+                    Lease ends or demand shifts? Move your infrastructure to a
+                    new site instead of writing it off. Luvante turns charging
+                    stations into portable, depreciable assets that follow your
+                    business.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <div className="h-full flex flex-col md:flex-row gap-6 p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/20 transition-colors">
+                <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center shrink-0">
+                  <Wrench size={28} className="text-green" />
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-white mb-2">
+                    Hardware Flexibility
+                  </h3>
+                  <p className="text-slate text-sm leading-relaxed">
+                    Bring your preferred Level 2 or Level 3 chargers from any
+                    OEM. The Luvante platform is charger-agnostic, so you are
+                    never locked into a single hardware vendor or technology
+                    cycle.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.4}>
+              <div className="h-full flex flex-col md:flex-row gap-6 p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/20 transition-colors">
+                <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center shrink-0">
+                  <Handshake size={28} className="text-green" />
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-white mb-2">
+                    Site Host Appeal
+                  </h3>
+                  <p className="text-slate text-sm leading-relaxed">
+                    Property owners and landlords prefer Luvante because it
+                    means no torn-up lots, no multi-week closures, and no
+                    permanent ground alterations — making it easier for you to
+                    win the best locations.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 bg-gradient-to-br from-navy via-navy-dark to-navy">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <AnimatedSection>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Ready to See the Platform in Action?
+              Ready to Deploy Faster as a CPO?
             </h2>
             <p className="mt-4 text-lg text-slate max-w-2xl mx-auto">
-              Contact our team to learn how the Luvante platform can transform
-              your EV charging infrastructure.
+              See how Luvante&apos;s modular platform can accelerate your
+              rollout, reduce your CapEx, and help you win more sites.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/contact"
+                href="/contact?type=cpo"
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-green text-navy-dark font-bold rounded-lg hover:bg-green-light transition-colors text-sm"
               >
-                Find Out More
+                Schedule a CPO Consultation
                 <ArrowUpRight
                   size={16}
                   className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"

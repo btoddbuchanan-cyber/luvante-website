@@ -19,6 +19,12 @@ import {
   Timer,
   Recycle,
   Puzzle,
+  CircleDollarSign,
+  Rocket,
+  Wrench,
+  BadgeCheck,
+  MapPin,
+  TrendingUp,
 } from "lucide-react";
 
 const stats = [
@@ -106,9 +112,9 @@ export default function HomePage() {
 
           <AnimatedSection delay={0.2}>
             <p className="mt-6 text-lg md:text-xl text-slate max-w-2xl mx-auto leading-relaxed">
-              Above-ground, weather-resistant, fully engineered, modular EV
-              charging infrastructure. Utility friendly. Faster installation.
-              Vastly less site disruption.
+              Above-ground, modular EV charging infrastructure for charge point
+              operators, fleets, and site hosts. Faster to deploy. Lower cost
+              per port. Zero excavation.
             </p>
           </AnimatedSection>
 
@@ -277,6 +283,132 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* CPO Partner Section */}
+      <section className="py-24 bg-gradient-to-b from-navy-dark to-navy">
+        <div className="mx-auto max-w-7xl px-6">
+          <AnimatedSection>
+            <SectionHeading
+              tag="For Charge Point Operators"
+              title="Deploy Faster. Earn More. Scale Without Limits."
+              description="Luvante gives CPOs a competitive edge with modular infrastructure that installs in days, reduces capital outlay, and scales to meet demand — without excavation or utility delays."
+            />
+          </AnimatedSection>
+
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <AnimatedSection delay={0.1}>
+              <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
+                <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 group-hover:bg-green/20 transition-colors">
+                  <Rocket size={28} className="text-green" />
+                </div>
+                <h3 className="font-heading text-xl font-semibold text-white mb-3">
+                  Faster Time to Revenue
+                </h3>
+                <p className="text-slate text-sm leading-relaxed">
+                  Go live in days, not months. Our above-ground modular system
+                  eliminates trenching and excavation — so your chargers start
+                  earning sooner.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
+                <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 group-hover:bg-green/20 transition-colors">
+                  <CircleDollarSign size={28} className="text-green" />
+                </div>
+                <h3 className="font-heading text-xl font-semibold text-white mb-3">
+                  Lower CapEx Per Port
+                </h3>
+                <p className="text-slate text-sm leading-relaxed">
+                  Save 10-25% on installation costs versus in-ground systems.
+                  Depreciable, relocatable assets mean smarter capital allocation
+                  and new financing pathways.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
+                <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 group-hover:bg-green/20 transition-colors">
+                  <TrendingUp size={28} className="text-green" />
+                </div>
+                <h3 className="font-heading text-xl font-semibold text-white mb-3">
+                  Scale on Demand
+                </h3>
+                <p className="text-slate text-sm leading-relaxed">
+                  Add capacity by connecting additional modules — no rip and
+                  replace. Grow your network site by site, matching charger
+                  rollout to actual demand.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.4}>
+              <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
+                <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 group-hover:bg-green/20 transition-colors">
+                  <MapPin size={28} className="text-green" />
+                </div>
+                <h3 className="font-heading text-xl font-semibold text-white mb-3">
+                  Win More Site Hosts
+                </h3>
+                <p className="text-slate text-sm leading-relaxed">
+                  Property owners prefer minimal disruption. Luvante&apos;s
+                  above-ground install means no torn-up parking lots, no
+                  weeks-long closures — making you the CPO of choice.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.5}>
+              <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
+                <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 group-hover:bg-green/20 transition-colors">
+                  <Wrench size={28} className="text-green" />
+                </div>
+                <h3 className="font-heading text-xl font-semibold text-white mb-3">
+                  Simpler O&M
+                </h3>
+                <p className="text-slate text-sm leading-relaxed">
+                  Above-ground components mean easier routine maintenance,
+                  faster charger swaps, and straightforward upgrades — keeping
+                  uptime high and service costs low.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.6}>
+              <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
+                <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 group-hover:bg-green/20 transition-colors">
+                  <BadgeCheck size={28} className="text-green" />
+                </div>
+                <h3 className="font-heading text-xl font-semibold text-white mb-3">
+                  Charger Agnostic
+                </h3>
+                <p className="text-slate text-sm leading-relaxed">
+                  Supports Level 2 and Level 3 chargers from any major OEM.
+                  Choose the hardware that fits your business model without
+                  infrastructure lock-in.
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+
+          <AnimatedSection delay={0.4}>
+            <div className="mt-12 text-center">
+              <Link
+                href="/contact?type=cpo"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-green text-navy-dark font-bold rounded-lg hover:bg-green-light transition-colors text-sm"
+              >
+                Become a CPO Partner
+                <ArrowUpRight
+                  size={16}
+                  className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                />
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-navy via-navy-dark to-navy">
         <div className="mx-auto max-w-4xl px-6 text-center">
@@ -285,26 +417,26 @@ export default function HomePage() {
               Ready to Elevate Your EV Charging?
             </h2>
             <p className="mt-4 text-lg text-slate max-w-2xl mx-auto">
-              Join the movement toward smarter, more sustainable EV
-              infrastructure. Get in touch to learn how Luvante can transform
-              your site.
+              Whether you&apos;re a charge point operator, site owner, or fleet
+              manager — Luvante&apos;s modular platform gets your chargers live
+              faster and at lower cost.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/contact"
+                href="/contact?type=cpo"
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-green text-navy-dark font-bold rounded-lg hover:bg-green-light transition-colors text-sm"
               >
-                Get in Touch
+                Talk to Our CPO Team
                 <ArrowUpRight
                   size={16}
                   className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
                 />
               </Link>
               <Link
-                href="/about#team"
+                href="/platform"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-white/20 text-white font-bold rounded-lg hover:bg-white/5 transition-colors text-sm"
               >
-                Meet the Team
+                Explore the Platform
               </Link>
             </div>
           </AnimatedSection>
