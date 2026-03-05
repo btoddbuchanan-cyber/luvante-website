@@ -18,7 +18,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: {
-    default: "Luvante | Sustainable Elevated EV Charging for Fleets, Streets & Councils",
+    default: "Luvante | Sustainable Elevated EV Charging for Fleets & Streets",
     template: "%s | Luvante",
   },
   description:
