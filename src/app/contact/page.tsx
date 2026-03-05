@@ -28,19 +28,25 @@ export default function ContactPage() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    const firstName = formData.get("firstName") as string;
+    const lastName = formData.get("lastName") as string;
+
     const body = {
-      firstName: formData.get("firstName") as string,
-      lastName: formData.get("lastName") as string,
+      name: `${firstName} ${lastName}`,
       email: formData.get("email") as string,
       organization: formData.get("organization") as string,
+      _subject: `New ${formData.get("inquiryType") || "General"} Inquiry from ${firstName} ${lastName}`,
       inquiryType: formData.get("inquiryType") as string,
       message: formData.get("message") as string,
     };
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://formsubmit.co/ajax/btb@luvante.com", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(body),
       });
 
