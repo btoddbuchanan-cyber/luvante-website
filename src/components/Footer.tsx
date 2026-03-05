@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   company: [
@@ -24,16 +25,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <Link href="/" className="inline-block">
-              <span className="font-heading text-2xl font-bold tracking-wide text-white">
-                LUVANTE
-              </span>
-              <p className="text-[10px] tracking-[0.25em] text-slate uppercase mt-0.5">
-                Elevated EV Charging
-              </p>
+              <Image
+                src="/images/logo-white.png"
+                alt="Luvante — Elevated EV Charging"
+                width={180}
+                height={40}
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="mt-4 text-sm text-slate leading-relaxed">
               Sustainable elevated electric vehicle charging infrastructure for
-              fleets, streets, and councils.
+              fleets and streets.
             </p>
           </div>
 

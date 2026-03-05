@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, ChevronDown, Mail, TrendingUp } from "lucide-react";
 
@@ -46,15 +47,15 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-sm border-b border-white/10">
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex flex-col">
-            <span className="font-heading text-2xl font-bold tracking-wide text-white group-hover:text-green transition-colors">
-              LUVANTE
-            </span>
-            <span className="text-[10px] tracking-[0.25em] text-slate uppercase">
-              Elevated EV Charging
-            </span>
-          </div>
+        <Link href="/" className="block">
+          <Image
+            src="/images/logo-white.png"
+            alt="Luvante — Elevated EV Charging"
+            width={180}
+            height={40}
+            priority
+            className="h-8 w-auto"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
