@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
 import StatCard from "@/components/StatCard";
 import SectionHeading from "@/components/SectionHeading";
@@ -139,8 +140,22 @@ export default function HomePage() {
             </div>
           </AnimatedSection>
 
+          {/* Hero Product Image */}
+          <AnimatedSection delay={0.4}>
+            <div className="mt-16 relative w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
+              <Image
+                src="/images/Luvante-Elevated-EV-Charging-System-for-Sustainable-Parking-Lots-Fleets-and-Councils-Fleet1.jpg"
+                alt="Luvante elevated EV charging system for fleet vehicles in a parking lot"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          </AnimatedSection>
+
           {/* Stats */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {stats.map((stat, i) => (
               <StatCard
                 key={stat.label}
@@ -329,6 +344,19 @@ export default function HomePage() {
             />
           </AnimatedSection>
 
+          {/* Solution Showcase Image */}
+          <AnimatedSection delay={0.1}>
+            <div className="mt-12 mb-16 relative w-full rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
+              <Image
+                src="/images/Luvante-Elevated-EV-Charging-System-for-Sustainable-Parking-Lots-Fleets-and-Councils-15b.jpg"
+                alt="Luvante elevated EV charging system in an urban environment with electric vehicles"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+              />
+            </div>
+          </AnimatedSection>
+
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimatedSection delay={0.1}>
               <div className="relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
@@ -390,6 +418,19 @@ export default function HomePage() {
               title="Built for Every Environment"
               description="From industrial fleet depots to urban street-side parking, Luvante's modular system adapts to any application."
             />
+          </AnimatedSection>
+
+          {/* Fleet Depot Showcase */}
+          <AnimatedSection delay={0.1}>
+            <div className="mt-12 mb-16 relative w-full rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
+              <Image
+                src="/images/Luvante-Elevated-EV-Charging-System-for-Sustainable-Parking-Lots-Fleets-and-Councils-Fleet21.jpg"
+                alt="Aerial view of a large fleet depot with Luvante elevated EV charging infrastructure"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+              />
+            </div>
           </AnimatedSection>
 
           <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">

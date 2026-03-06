@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import StatCard from "@/components/StatCard";
@@ -186,6 +187,15 @@ export default function PlatformPage() {
                   supports both Level 2 and Level 3 chargers for any fleet or
                   public application.
                 </p>
+                <div className="mt-8 rounded-2xl overflow-hidden border border-white/10">
+                  <Image
+                    src="/images/Luvante-Elevated-EV-Charging-System-for-Sustainable-Parking-Lots-Fleets-and-Councils-Fleet1.jpg"
+                    alt="Luvante elevated EV charging system for fleet vehicles"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto"
+                  />
+                </div>
               </div>
             </AnimatedSection>
 
@@ -251,6 +261,19 @@ export default function PlatformPage() {
               title="Designed for Every Environment"
               description="From fleet depots to urban streets, the Luvante platform adapts to any deployment scenario."
             />
+          </AnimatedSection>
+
+          {/* Application Showcase Image */}
+          <AnimatedSection delay={0.1}>
+            <div className="mt-12 mb-16 relative w-full rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
+              <Image
+                src="/images/Luvante-Elevated-EV-Charging-System-for-Sustainable-Parking-Lots-Fleets-and-Councils-Fleet-3.jpg"
+                alt="Aerial view of Luvante elevated EV charging infrastructure at a fleet depot"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+              />
+            </div>
           </AnimatedSection>
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
