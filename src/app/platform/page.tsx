@@ -263,16 +263,27 @@ export default function PlatformPage() {
             />
           </AnimatedSection>
 
-          {/* Application Showcase Image */}
+          {/* Application Showcase Images — Street & Fleet */}
           <AnimatedSection delay={0.1}>
-            <div className="mt-12 mb-16 relative w-full rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
-              <Image
-                src="/images/Luvante-Elevated-EV-Charging-System-for-Sustainable-Parking-Lots-Fleets-and-Councils-Fleet-3.jpg"
-                alt="Aerial view of Luvante elevated EV charging infrastructure at a fleet depot"
-                width={1200}
-                height={675}
-                className="w-full h-auto"
-              />
+            <div className="mt-12 mb-16 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
+                <Image
+                  src="/images/Luvante-Elevated-EV-Charging-System-for-Sustainable-Parking-Lots-Fleets-and-Councils-15.jpg"
+                  alt="Luvante elevated EV charging in a street-side urban setting"
+                  width={600}
+                  height={338}
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
+                <Image
+                  src="/images/Luvante-Elevated-EV-Charging-System-for-Sustainable-Parking-Lots-Fleets-and-Councils-Fleet-3.jpg"
+                  alt="Aerial view of Luvante elevated EV charging infrastructure at a fleet depot"
+                  width={600}
+                  height={338}
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
           </AnimatedSection>
 
