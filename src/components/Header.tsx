@@ -3,12 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, ChevronDown, Mail, TrendingUp } from "lucide-react";
+import { Menu, X, ChevronDown, Mail, TrendingUp, BookOpen } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/platform", label: "The Luvante Platform" },
+  { href: "/resources", label: "Resources" },
 ];
 
 const contactDropdownItems = [

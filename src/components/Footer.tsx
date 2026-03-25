@@ -9,6 +9,8 @@ const footerLinks = {
     { href: "/contact", label: "Contact Us" },
   ],
   resources: [
+    { href: "/resources", label: "Blog" },
+    { href: "/resources#tools", label: "Tools & Calculators" },
     { href: "/press", label: "Press & Media" },
     { href: "/about#team", label: "The Luvante Team" },
   ],
