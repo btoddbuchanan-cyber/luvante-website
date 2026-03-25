@@ -22,9 +22,9 @@ import {
   Puzzle,
   CircleDollarSign,
   Rocket,
-  Wrench,
+  Paintbrush,
   BadgeCheck,
-  MapPin,
+  Scale,
   TrendingUp,
 } from "lucide-react";
 
@@ -38,53 +38,53 @@ const stats = [
 const problems = [
   {
     icon: DollarSign,
-    title: "Cost",
+    title: "Small Deal Sizes",
     items: [
-      "Bespoke designs don't scale",
-      "Large upfront expenses",
-      "Operational disruptions",
-      "Difficult financing",
+      "Retrofits sized for 2–5 ports, not actual demand",
+      "Trenching costs force conservative proposals",
+      "Clients balk at parking lot construction",
+      "Revenue opportunity left on the table",
     ],
   },
   {
     icon: Timer,
-    title: "Speed",
+    title: "Slow Time to Revenue",
     items: [
-      "Long project timelines",
-      "Equipment lead time delays",
-      "Utility coordination obstacles",
-      "Operational disruptions",
-    ],
-  },
-  {
-    icon: Recycle,
-    title: "Sustainability",
-    items: [
-      "Buried concrete, plastic & wire",
-      "Parking lot disruption",
-      "Limited redeployability",
-      "Wasted materials",
+      "Civil work adds weeks or months",
+      "Tenant and HOA approval delays",
+      "Building boards reject disruption",
+      "Decision cycles stall at the proposal stage",
     ],
   },
   {
     icon: Puzzle,
-    title: "Flexibility",
+    title: "Hard to Scale",
     items: [
-      "Fixed to current demands only",
-      "Industry evolution incompatibility",
-      "Incentive programs lack adaptability",
-      "Single-use installations",
+      "Small pilots near the electrical panel",
+      "Adding capacity means re-trenching",
+      "No path from pilot to full deployment",
+      "Fixed installations can't adapt",
+    ],
+  },
+  {
+    icon: Recycle,
+    title: "Hard to Differentiate",
+    items: [
+      "Competitive bids look the same",
+      "Margin pressure on commodity installs",
+      "No way to add value beyond hardware",
+      "Site hosts see all CPOs as interchangeable",
     ],
   },
 ];
 
 const applications = [
+  { icon: Home, title: "Multi-Family Housing" },
+  { icon: Briefcase, title: "Workplaces & Office Parks" },
   { icon: Building2, title: "Industrial & Logistics Hubs" },
   { icon: ShoppingCart, title: "Commercial & Retail Parking" },
   { icon: Trees, title: "Urban Infrastructure" },
-  { icon: Briefcase, title: "Workplaces & Office Parks" },
   { icon: Bus, title: "Transportation Hubs" },
-  { icon: Home, title: "Multi-Family Housing" },
   { icon: Fuel, title: "Highway Travel Stops" },
   { icon: Landmark, title: "Institutions & Public Services" },
 ];
@@ -100,22 +100,22 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 pb-20 text-center">
           <AnimatedSection>
             <span className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-green bg-green/10 rounded-full mb-6">
-              A Smarter Way to Charge
+              Elevated EV Charging Infrastructure
             </span>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1}>
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight max-w-5xl mx-auto">
-              Sustainable Elevated EV Charging for{" "}
-              <span className="text-green">Fleets & Streets</span>
+              Bigger Retrofits.{" "}
+              <span className="text-green">Zero Trenching.</span>
             </h1>
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
             <p className="mt-6 text-lg md:text-xl text-slate max-w-2xl mx-auto leading-relaxed">
-              Above-ground, modular EV charging infrastructure for charge point
-              operators, fleets, and site hosts. Faster to deploy. Lower cost
-              per port. Zero excavation.
+              Above-ground, modular EV charging infrastructure that eliminates
+              excavation and disruption — so CPOs can deploy more ports, faster,
+              at multifamily, office, and fleet sites.
             </p>
           </AnimatedSection>
 
@@ -176,8 +176,8 @@ export default function HomePage() {
           <AnimatedSection>
             <SectionHeading
               tag="For Charge Point Operators"
-              title="Deploy Faster. Earn More. Scale Without Limits."
-              description="Luvante gives CPOs a competitive edge with modular infrastructure that installs in days, reduces capital outlay, and scales to meet demand — without excavation or utility delays."
+              title="Win Larger Deals. Compress Timelines. Stand Out."
+              description="Retrofit deals in multifamily and office are undersized — not because of demand, but because of disruption. Luvante's elevated design removes the barriers that shrink your projects and stall approvals."
             />
           </AnimatedSection>
 
@@ -185,15 +185,15 @@ export default function HomePage() {
             <AnimatedSection delay={0.1}>
               <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
                 <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 group-hover:bg-green/20 transition-colors">
-                  <Rocket size={28} className="text-green" />
+                  <TrendingUp size={28} className="text-green" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-white mb-3">
-                  Faster Time to Revenue
+                  Larger Retrofit Deals
                 </h3>
                 <p className="text-slate text-sm leading-relaxed">
-                  Go live in days, not months. Our above-ground modular system
-                  eliminates trenching and excavation — so your chargers start
-                  earning sooner.
+                  Our elevated design eliminates trenching disruption, so
+                  retrofit deals can finally match actual demand. Design projects
+                  at 15&ndash;20+ ports instead of settling for 2&ndash;5.
                 </p>
               </div>
             </AnimatedSection>
@@ -207,9 +207,9 @@ export default function HomePage() {
                   Lower CapEx Per Port
                 </h3>
                 <p className="text-slate text-sm leading-relaxed">
-                  Save 10-25% on installation costs versus in-ground systems.
-                  Depreciable, relocatable assets mean smarter capital allocation
-                  and new financing pathways.
+                  By saving on trenching and civil work, our system delivers
+                  lower installed cost per port. Depreciable, relocatable assets
+                  mean smarter capital allocation.
                 </p>
               </div>
             </AnimatedSection>
@@ -217,15 +217,15 @@ export default function HomePage() {
             <AnimatedSection delay={0.3}>
               <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
                 <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 group-hover:bg-green/20 transition-colors">
-                  <TrendingUp size={28} className="text-green" />
+                  <Rocket size={28} className="text-green" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-white mb-3">
-                  Scale on Demand
+                  Faster Time to Revenue
                 </h3>
                 <p className="text-slate text-sm leading-relaxed">
-                  Add capacity by connecting additional modules — no rip and
-                  replace. Grow your network site by site, matching charger
-                  rollout to actual demand.
+                  Not only do you save time by avoiding civil work — you compress
+                  decision cycles by removing tenant and HOA concerns about
+                  &ldquo;construction in the parking lot.&rdquo;
                 </p>
               </div>
             </AnimatedSection>
@@ -233,15 +233,15 @@ export default function HomePage() {
             <AnimatedSection delay={0.4}>
               <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
                 <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 group-hover:bg-green/20 transition-colors">
-                  <MapPin size={28} className="text-green" />
+                  <Scale size={28} className="text-green" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-white mb-3">
-                  Win More Site Hosts
+                  Scale on Demand
                 </h3>
                 <p className="text-slate text-sm leading-relaxed">
-                  Property owners prefer minimal disruption. Luvante&apos;s
-                  above-ground install means no torn-up parking lots, no
-                  weeks-long closures — making you the CPO of choice.
+                  Modular, no-trenching design lets you add more charging
+                  capacity in the future without disruption. Start with what the
+                  site needs today and grow with demand.
                 </p>
               </div>
             </AnimatedSection>
@@ -249,15 +249,15 @@ export default function HomePage() {
             <AnimatedSection delay={0.5}>
               <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green/30 transition-all group">
                 <div className="w-14 h-14 rounded-xl bg-green/10 flex items-center justify-center mb-6 group-hover:bg-green/20 transition-colors">
-                  <Wrench size={28} className="text-green" />
+                  <Paintbrush size={28} className="text-green" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-white mb-3">
-                  Simpler O&M
+                  Differentiate Your Bid
                 </h3>
                 <p className="text-slate text-sm leading-relaxed">
-                  Above-ground components mean easier routine maintenance,
-                  faster charger swaps, and straightforward upgrades — keeping
-                  uptime high and service costs low.
+                  Our elevated design is unique — it allows your client to
+                  integrate branding, art, lighting, security cameras, or other
+                  amenities. Stand out without compressing your margins.
                 </p>
               </div>
             </AnimatedSection>
@@ -268,11 +268,11 @@ export default function HomePage() {
                   <BadgeCheck size={28} className="text-green" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-white mb-3">
-                  Charger Agnostic
+                  Hardware Agnostic
                 </h3>
                 <p className="text-slate text-sm leading-relaxed">
                   Supports Level 2 and Level 3 chargers from any major OEM.
-                  Choose the hardware that fits your business model without
+                  Choose the hardware that fits your business model — no
                   infrastructure lock-in.
                 </p>
               </div>
@@ -296,14 +296,71 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Problem Section */}
+      {/* Market Opportunity Section */}
       <section className="py-24 bg-charcoal">
         <div className="mx-auto max-w-7xl px-6">
           <AnimatedSection>
             <SectionHeading
+              tag="The Opportunity"
+              title="Demand Is Real. Retrofits Are Undersized."
+              description="EV charging demand in multifamily and office is surging — but most retrofit projects are sized around installation convenience, not resident or tenant need."
+            />
+          </AnimatedSection>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Multifamily Stats */}
+            <AnimatedSection delay={0.1}>
+              <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
+                <span className="text-xs font-semibold uppercase tracking-widest text-green">Multifamily</span>
+                <div className="mt-6 flex items-center gap-6">
+                  <div className="text-center">
+                    <p className="font-heading text-4xl md:text-5xl font-bold text-green">~5%</p>
+                    <p className="mt-2 text-sm text-slate">of U.S. multifamily properties have on-site EV charging</p>
+                  </div>
+                  <span className="text-2xl text-slate font-light">vs.</span>
+                  <div className="text-center">
+                    <p className="font-heading text-4xl md:text-5xl font-bold text-white">15%</p>
+                    <p className="mt-2 text-sm text-slate">of multifamily renters plan to buy an EV within 5 years</p>
+                  </div>
+                </div>
+                <p className="mt-6 text-sm text-slate/80 leading-relaxed">
+                  58% of those renters say they would pay more in rent to access charging. The default outcome of 2&ndash;5 chargers near the panel isn&apos;t about demand — it&apos;s about avoiding disruption.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            {/* Office Stats */}
+            <AnimatedSection delay={0.2}>
+              <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
+                <span className="text-xs font-semibold uppercase tracking-widest text-green">Office</span>
+                <div className="mt-6 flex items-center gap-6">
+                  <div className="text-center">
+                    <p className="font-heading text-4xl md:text-5xl font-bold text-green">~64%</p>
+                    <p className="mt-2 text-sm text-slate">increase in charging sessions vs. pre-pandemic</p>
+                  </div>
+                  <span className="text-2xl text-slate font-light">vs.</span>
+                  <div className="text-center">
+                    <p className="font-heading text-4xl md:text-5xl font-bold text-white">~22%</p>
+                    <p className="mt-2 text-sm text-slate">increase in charging port installations</p>
+                  </div>
+                </div>
+                <p className="mt-6 text-sm text-slate/80 leading-relaxed">
+                  EV drivers per port in office buildings jumped from 8 to 12 post-pandemic. The inability to keep pace is driven by the cost of retrofits and concerns about disruption.
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Section */}
+      <section className="py-24 bg-gradient-to-b from-charcoal to-navy-dark">
+        <div className="mx-auto max-w-7xl px-6">
+          <AnimatedSection>
+            <SectionHeading
               tag="The Problem"
-              title="Why Current EV Charging Falls Short"
-              description="Traditional in-ground EV charging systems face critical challenges that limit adoption, increase costs, and slow the transition to electric vehicles."
+              title="Why Retrofit Deals Stall"
+              description="Proposals get cut because trenching in an occupied parking lot sounds costly and disruptive. Building boards and HOAs vote down larger deployments. The deal stalls at the proposal stage — not at engineering."
             />
           </AnimatedSection>
 
@@ -341,8 +398,8 @@ export default function HomePage() {
           <AnimatedSection>
             <SectionHeading
               tag="The Solution"
-              title="Elevated, Modular EV Charging"
-              description="Luvante positions charging components in above-ground, weather-resistant, fully engineered, modular structures — delivering game-changing reduction in Total Cost of Ownership."
+              title="Elevated Design Changes the Deal"
+              description="For disruption-constrained sites — buildings from the 1990s–2010s with adequate panel capacity but occupied parking lots — Luvante's above-ground design removes the barrier that kills proposals."
             />
           </AnimatedSection>
 
@@ -377,12 +434,12 @@ export default function HomePage() {
                   <Zap size={28} className="text-green" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-white mb-3">
-                  Utility Friendly
+                  No Trenching Required
                 </h3>
                 <p className="text-slate text-sm leading-relaxed">
-                  Leverages proven power distribution technologies from
-                  industrial facilities. Supports Level 2 and Level 3 EV
-                  chargers for fleet and street applications.
+                  Elevated busway delivers power above ground — eliminating
+                  excavation entirely. Leverages proven industrial power
+                  distribution for Level 2 and Level 3 chargers.
                 </p>
               </div>
             </AnimatedSection>
@@ -393,12 +450,12 @@ export default function HomePage() {
                   <Clock size={28} className="text-green" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-white mb-3">
-                  Faster Installation
+                  Approval-Friendly Design
                 </h3>
                 <p className="text-slate text-sm leading-relaxed">
-                  Deploys in days or weeks versus weeks or months with
-                  conventional in-ground systems. Reducing installation times by
-                  40% to 50%.
+                  No &ldquo;construction in the parking lot&rdquo; means faster
+                  approval from building boards, HOAs, and property managers.
+                  Compress decision cycles from months to weeks.
                 </p>
               </div>
             </AnimatedSection>
@@ -409,12 +466,12 @@ export default function HomePage() {
                   <Leaf size={28} className="text-green" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-white mb-3">
-                  Vastly Less Disruption
+                  Premium Amenity Integration
                 </h3>
                 <p className="text-slate text-sm leading-relaxed">
-                  Eliminates costly, time-consuming excavation for power cables
-                  and conduits. Easier routine maintenance, upgrades, and
-                  component swaps.
+                  The elevated structure integrates branding, lighting, art,
+                  security cameras, and weather protection — turning
+                  infrastructure into an amenity that enhances the property.
                 </p>
               </div>
             </AnimatedSection>
@@ -429,7 +486,7 @@ export default function HomePage() {
             <SectionHeading
               tag="Applications"
               title="Built for Every Environment"
-              description="From industrial fleet depots to urban street-side parking, Luvante's modular system adapts to any application."
+              description="From multifamily retrofits to office parks and fleet depots, Luvante's modular system adapts to any site — especially where disruption is the constraint."
             />
           </AnimatedSection>
 
@@ -485,12 +542,12 @@ export default function HomePage() {
         <div className="mx-auto max-w-4xl px-6 text-center">
           <AnimatedSection>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Ready to Elevate Your EV Charging?
+              Ready to Win Larger Retrofit Deals?
             </h2>
             <p className="mt-4 text-lg text-slate max-w-2xl mx-auto">
-              Whether you&apos;re a charge point operator, site owner, or fleet
-              manager — Luvante&apos;s modular platform gets your chargers live
-              faster and at lower cost.
+              Whether you&apos;re deploying at multifamily, office, or fleet
+              sites — Luvante&apos;s elevated design removes the disruption
+              barrier that shrinks your projects and stalls approvals.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
